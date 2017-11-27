@@ -5,13 +5,15 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">Welcome to React</h1>
+            <div className="container">
+                <header className="header">
+                    <h1>Payment of Existence</h1>
+                    <h4>Keep track of workplace wages and wage model</h4>
                 </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
+
+                <section className="body">
+                    Body placeholder
+                </section>
             </div>
         );
     }
