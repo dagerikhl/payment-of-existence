@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.app-header {
+    padding: 8px;
+
+    background-color: $background-color-sec;
+    color: $font-color-sec;
+
+    :nth-child(1) {
+        margin-bottom: 4px;
+    }
+}

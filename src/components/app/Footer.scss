@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.app-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 8px;
+
+    background-color: $background-color-sec;
+    color: $font-color-sec;
+
+    > .year {
+    }
+
+    > .made-by {
+        font-style: italic;
+    }
+}

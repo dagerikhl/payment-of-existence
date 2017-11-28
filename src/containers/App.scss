@@ -1,17 +1,23 @@
-@import '../styles/variables.scss';
+.app-container {
+    display: flex;
+    flex-direction: column;
 
-.container {
-    .header {
-        padding: 8px;
+    height: 100%;
 
-        background-color: #222222;
-        color: #ffffff;
+    > .body {
+        display: flex;
 
-        :nth-child(1) {
-            margin-bottom: 4px;
+        height: 100%;
+
+        > .left {
+            display: flex;
+            flex-direction: column;
+
+            width: 70%;
         }
-    }
 
-    .body {
+        > .right {
+            width: 30%;
+        }
     }
 }

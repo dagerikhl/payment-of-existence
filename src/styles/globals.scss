@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+html {
+    height: 100%;
+
+    background-color: $background-color-pri;
+
+    > body {
+        height: 100%;
+
+        margin: 0;
+        font-family: sans-serif;
+
+        #root {
+            height: 100%;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color-pri;
+}
+
+.sec-link {
+    color: $link-color-sec;
+}
+
+// For debugging
+* {
+    //outline: 1pt solid black;
+}
