@@ -13,19 +13,16 @@ class App extends Component {
         return (
             <div className='app-container'>
                 <Header/>
-
-                <div className='body'>
-                    <div className='left'>
+                <section className='body'>
+                    <div className='input-container'>
                         <ControlPanel/>
                         <InputForm/>
                         <Work/>
                     </div>
-
-                    <div className='right'>
+                    <div className='output-container'>
                         <Representation/>
                     </div>
-                </div>
-
+                </section>
                 <Footer/>
             </div>
         );

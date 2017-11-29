@@ -9,15 +9,15 @@
 
         height: 100%;
 
-        > .left {
+        > .input-container {
             display: flex;
             flex-direction: column;
 
-            width: 70%;
+            width: 60%;
         }
 
-        > .right {
-            width: 30%;
+        > .output-container {
+            width: 40%;
         }
     }
 }

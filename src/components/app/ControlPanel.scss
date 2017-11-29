@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.control-panel {
+    display: flex;
+
+    margin: 0.25em;
+    padding: 0.25em;
+
+    outline: 1pt solid $border-color-pri;
+
+    > section {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0.25em;
+
+        > * {
+            margin-bottom: 0.25em;
+        }
+    }
+
+    .general {
+        width: 30%;
+
+        > label {
+            display: flex;
+
+            > div {
+                min-width: 6em;
+            }
+
+            > select {
+                min-width: 5em;
+            }
+        }
+    }
+
+    .model-data {
+        width: 70%;
+
+        > .data-line {
+            display: flex;
+            align-items: center;
+
+            > label {
+                display: flex;
+
+                min-width: 10em;
+
+                > div {
+                    min-width: 6.5em;
+                }
+
+                > input[type=checkbox] {
+                    width: fit-content;
+                }
+
+                > input[type=number] {
+                    width: 8em;
+
+                    margin-left: 0.25em;
+                    margin-right: 0.25em;
+                }
+            }
+        }
+    }
+}

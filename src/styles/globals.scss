@@ -8,6 +8,7 @@ html {
 
     > body {
         height: 100%;
+        min-height: 480px;
         min-width: 1024px;
 
         margin: 0;
@@ -36,23 +37,27 @@ a {
     color: $link-color-sec;
 }
 
+input[type=number] {
+    text-align: right;
+}
+
 // Outlines to debug CSS
-* {
-    outline: 1pt solid black;
-}
-
-section {
-    outline: 1pt solid orange;
-}
-
-div {
-    outline: 1pt solid darkred;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    outline: 1pt solid darkcyan;
-}
-
-a {
-    outline: 1pt dashed darkcyan;
-}
+//* {
+//    outline: 1pt solid black;
+//}
+//
+//section {
+//    outline: 1pt solid orange;
+//}
+//
+//div {
+//    outline: 1pt solid darkred;
+//}
+//
+//h1, h2, h3, h4, h5, h6 {
+//    outline: 1pt solid darkcyan;
+//}
+//
+//a {
+//    outline: 1pt dashed darkcyan;
+//}
