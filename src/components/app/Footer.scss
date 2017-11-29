@@ -1,23 +1,10 @@
 @import '../../styles/variables.scss';
+@import '../../styles/Banner.scss';
 
 .app-footer {
-    display: flex;
-    justify-content: space-between;
+    @include Banner(row);
 
-    padding: 8px;
+    align-items: center;
 
-    overflow: hidden;
-    white-space: nowrap;
-
-    background-color: $background-color-sec;
-    color: $font-color-sec;
-
-    > .year {
-        margin-right: 4px;
-    }
-
-    > .made-by {
-        margin-left: 4px;
-        font-style: italic;
-    }
+    min-height: 2em;
 }

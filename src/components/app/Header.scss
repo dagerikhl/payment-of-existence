@@ -1,17 +1,10 @@
 @import '../../styles/variables.scss';
+@import '../../styles/Banner.scss';
 
 .app-header {
-    padding: 8px;
+    @include Banner(column);
 
-    background-color: $background-color-sec;
-    color: $font-color-sec;
+    align-items: flex-start;
 
-    > * {
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    :nth-child(1) {
-        margin-bottom: 4px;
-    }
+    min-height: 5em;
 }

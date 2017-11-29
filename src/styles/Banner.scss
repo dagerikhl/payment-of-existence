@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+@mixin Banner($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    background-color: $background-color-sec;
+    color: $font-color-sec;
+
+    @if ($direction == row) {
+        padding: 0.5em 0.25em;
+
+        > * {
+            margin: 0 0.25em;
+        }
+    } @else if ($direction == column) {
+        padding: 0.25em 0.5em;
+
+        > * {
+            margin: 0.25em 0;
+        }
+    }
+}
