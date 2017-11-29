@@ -4,5 +4,5 @@ $background-color-sec: #222222;
 $font-color-pri: #020202;
 $font-color-sec: #fdfdfd;
 
-$link-color-pri: mix($font-color-pri, #0000ff, 75%);
-$link-color-sec: mix($font-color-sec, #0000ff, 75%);
+$link-color-pri: darken(mix($font-color-pri, #0000ff, 75%), 2%);
+$link-color-sec: lighten(mix($font-color-sec, #0000ff, 75%), 2%);

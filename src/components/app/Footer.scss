@@ -6,13 +6,18 @@
 
     padding: 8px;
 
+    overflow: hidden;
+    white-space: nowrap;
+
     background-color: $background-color-sec;
     color: $font-color-sec;
 
     > .year {
+        margin-right: 4px;
     }
 
     > .made-by {
+        margin-left: 4px;
         font-style: italic;
     }
 }

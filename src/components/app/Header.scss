@@ -6,6 +6,11 @@
     background-color: $background-color-sec;
     color: $font-color-sec;
 
+    > * {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
     :nth-child(1) {
         margin-bottom: 4px;
     }
