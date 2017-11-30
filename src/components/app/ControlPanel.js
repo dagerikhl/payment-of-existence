@@ -17,15 +17,15 @@ class ControlPanel extends Component {
         'ZMW', 'ZWD'
     ];
 
-    wageModels = ['Ca18', 'HB17'];
+    wageModels = ['NONE', 'Ca18', 'HB17'];
 
     constructor(props) {
         super(props);
         this.state = {
             currency: 'NOK',
-            wageModel: 'Ca18',
+            wageModel: 'NONE',
             yearlyWage: {
-                active: false,
+                active: true,
                 amount: 0
             },
             hourlyWage: {
@@ -49,20 +49,38 @@ class ControlPanel extends Component {
     };
 
     yearlyWageActiveChange = (e) => {
-        this.setState({ yearlyWage: { ...this.state.yearlyWage, active: e.target.checked } });
+        this.setState({
+            yearlyWage: {
+                ...this.state.yearlyWage,
+                active: e.target.checked
+            },
+            hourlyWage: {
+                ...this.state.hourlyWage,
+                active: !e.target.checked
+            }
+        });
     };
 
     yearlyWageAmountChange = (e) => {
         this.setState({ yearlyWage: { ...this.state.yearlyWage, amount: +e.target.value } });
-    }
+    };
 
     hourlyWageActiveChange = (e) => {
-        this.setState({ hourlyWage: { ...this.state.hourlyWage, active: e.target.checked } });
+        this.setState({
+            yearlyWage: {
+                ...this.state.yearlyWage,
+                active: !e.target.checked
+            },
+            hourlyWage: {
+                ...this.state.hourlyWage,
+                active: e.target.checked
+            }
+        });
     };
 
     hourlyWageAmountChange = (e) => {
         this.setState({ hourlyWage: { ...this.state.hourlyWage, amount: +e.target.value } });
-    };;
+    };
 
     render() {
         return (
@@ -70,13 +88,13 @@ class ControlPanel extends Component {
                 <section className='general'>
                     <h3>General</h3>
                     <label>
-                        <div>Currency</div>
+                        <div className='label-text'>Currency</div>
                         <select value={this.state.currency} onChange={this.currencyChange}>
                             {this.currencies.map((c) => (<option key={c} value={c}>{c}</option>))}
                         </select>
                     </label>
                     <label>
-                        <div>Wage Model</div>
+                        <div className='label-text'>Wage Model</div>
                         <select value={this.state.wageModel} onChange={this.wageModelChange}>
                             {this.wageModels.map((c) => (<option key={c} value={c}>{c}</option>))}
                         </select>
@@ -86,31 +104,35 @@ class ControlPanel extends Component {
                     <h3>Wage Model Data</h3>
                     <div className='data-line'>
                         <label>
-                            <div>Yearly wage</div>
-                            <input type='checkbox'
-                                   value={this.state.yearlyWage.active}
+                            <div className='label-text'>Yearly wage</div>
+                            <input type='radio'
+                                   checked={this.state.yearlyWage.active}
                                    onChange={this.yearlyWageActiveChange}/>
                         </label>
                         <label>
-                            <div>Amount {this.state.currency}</div>
+                            <div className='label-text'>Amount {this.state.currency}</div>
                             <input type='number'
+                                   disabled={!this.state.yearlyWage.active}
                                    value={this.state.yearlyWage.amount}
                                    min='0'
+                                   step='10'
                                    onChange={this.yearlyWageAmountChange}/>
                         </label>
                     </div>
                     <div className='data-line'>
                         <label>
-                            <div>Hourly wage</div>
-                            <input type='checkbox'
-                                   value={this.state.hourlyWage.active}
+                            <div className='label-text'>Hourly wage</div>
+                            <input type='radio'
+                                   checked={this.state.hourlyWage.active}
                                    onChange={this.hourlyWageActiveChange}/>
                         </label>
                         <label>
-                            <div>Amount {this.state.currency}</div>
+                            <div className='label-text'>Amount {this.state.currency}</div>
                             <input type='number'
+                                   disabled={!this.state.hourlyWage.active}
                                    value={this.state.hourlyWage.amount}
                                    min='0'
+                                   step='10'
                                    onChange={this.hourlyWageAmountChange}/>
                         </label>
                     </div>

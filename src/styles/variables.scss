@@ -1,3 +1,4 @@
+// Colors
 $background-color-pri: #eeeef5;
 $background-color-sec: #222222;
 
@@ -9,3 +10,7 @@ $font-color-sec: #fdfdfd;
 
 $link-color-pri: darken(mix($font-color-pri, #0000ff, 75%), 2%);
 $link-color-sec: lighten(mix($font-color-sec, #0000ff, 75%), 2%);
+
+// Borders
+$border-pri: 1pt solid $border-color-pri;
+$border-sec: 1pt solid $border-color-sec;
