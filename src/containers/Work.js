@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Work.css';
-import WorkItem from '../components/app/work/WorkItem';
+import WorkItem from '../components/WorkItem';
 
 class Work extends Component {
 
