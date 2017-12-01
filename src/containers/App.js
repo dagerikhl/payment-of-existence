@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import ControlPanel from './ControlPanel';
-import Footer from '../components/app/Footer';
-import Header from '../components/app/Header';
-import InputForm from '../components/app/InputForm';
+import Footer from '../components/PageFooter';
+import Header from '../components/PageHeader';
+import InputForm from './InputForm';
 import Representation from './Representation';
 import Work from './Work';
 

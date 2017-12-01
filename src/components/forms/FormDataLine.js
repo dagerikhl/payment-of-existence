@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './FormFieldDataLine.css';
+import './FormDataLine.css';
 
-export default class FormFieldDataLine extends Component {
+export default class FormDataLine extends Component {
 
     handleActiveChange = (e) => {
         let data = {
@@ -23,14 +23,14 @@ export default class FormFieldDataLine extends Component {
     render() {
         return (
             <div className='form-field-data-line'>
-                <label>
-                    <div className='label-text'>{this.props.name}</div>
+                <label className='active'>
+                    <div className='text'>{this.props.name}</div>
                     <input type='radio'
                            checked={this.props.object.active}
                            onChange={this.handleActiveChange}/>
                 </label>
-                <label>
-                    <div className='label-text'>Amount</div>
+                <label className='amount'>
+                    <div className='text'>Amount</div>
                     <input type='number'
                            disabled={!this.props.object.active}
                            value={this.props.object.amount}
@@ -44,7 +44,7 @@ export default class FormFieldDataLine extends Component {
 
 }
 
-FormFieldDataLine.propTypes = {
+FormDataLine.propTypes = {
     name: PropTypes.string.isRequired,
     object: PropTypes.shape({
         active: PropTypes.bool,

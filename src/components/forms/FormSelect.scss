@@ -4,11 +4,12 @@
 
     height: 2em;
 
-    > .label-text {
+    > .text {
         min-width: 6em;
     }
 
     > select {
+        height: 1.35em;
         width: 5em;
     }
 }

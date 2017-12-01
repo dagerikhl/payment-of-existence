@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ControlPanel.css';
-import FormFieldDataLine from '../components/FormFieldDataLine';
-import FormFieldSelect from '../components/FormFieldSelect';
+import FormFieldDataLine from '../components/forms/FormDataLine';
+import FormFieldSelect from '../components/forms/FormSelect';
 
 class ControlPanel extends Component {
 

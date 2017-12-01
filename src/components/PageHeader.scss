@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/Banner.scss';
+@import '../styles/variables';
+@import '../styles/Banner';
 
 .app-header {
     @include Banner(column);

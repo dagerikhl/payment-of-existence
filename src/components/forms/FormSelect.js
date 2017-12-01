@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './FormFieldSelect.css';
+import './FormSelect.css';
 
-export default class FormFieldSelect extends Component {
+export default class FormSelect extends Component {
 
     handleChange = (e) => {
         let data = {};
@@ -14,7 +14,7 @@ export default class FormFieldSelect extends Component {
     render() {
         return (
             <label className='form-field-select'>
-                <div className='label-text'>{this.props.name}</div>
+                <div className='text'>{this.props.name}</div>
                 <select value={this.props.value} onChange={this.handleChange}>
                     {this.props.values.map((c) => (<option key={c} value={c}>{c}</option>))}
                 </select>
@@ -24,7 +24,7 @@ export default class FormFieldSelect extends Component {
 
 }
 
-FormFieldSelect.propTypes = {
+FormSelect.propTypes = {
     field: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,

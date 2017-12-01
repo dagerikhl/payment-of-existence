@@ -2,7 +2,7 @@
     display: flex;
 
     > :nth-child(n + 2) {
-        margin-left: 2em;
+        margin-left: 1em;
     }
 
     > label {
@@ -10,12 +10,21 @@
         align-items: center;
 
         height: 2em;
+    }
 
-        > .label-text {
+    > .active {
+        > .text {
             min-width: 6em;
         }
+    }
 
-        input[type=number] {
+    > .amount {
+        > .text {
+            min-width: 4em;
+        }
+
+        > input[type=number] {
+            height: 0.9em;
             width: 8em;
         }
     }
