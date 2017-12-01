@@ -1,0 +1,14 @@
+.form-field-select {
+    display: flex;
+    align-items: center;
+
+    height: 2em;
+
+    > .label-text {
+        min-width: 6em;
+    }
+
+    > select {
+        width: 5em;
+    }
+}

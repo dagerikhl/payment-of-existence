@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ControlPanel from '../components/app/ControlPanel';
+import ControlPanel from './ControlPanel';
 import Footer from '../components/app/Footer';
 import Header from '../components/app/Header';
 import InputForm from '../components/app/InputForm';

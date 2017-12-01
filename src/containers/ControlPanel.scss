@@ -1,0 +1,22 @@
+@import '../styles/variables';
+
+.control-panel {
+    display: flex;
+
+    margin: 0.25em;
+    padding: 0.25em;
+
+    border: $border-pri;
+
+    h3 {
+        border-bottom: $border-sec;
+    }
+
+    > .general {
+        width: 30%;
+    }
+
+    > .model-data {
+        width: 70%;
+    }
+}

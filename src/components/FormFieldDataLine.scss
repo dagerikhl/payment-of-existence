@@ -1,0 +1,22 @@
+.form-field-data-line {
+    display: flex;
+
+    > :nth-child(n + 2) {
+        margin-left: 2em;
+    }
+
+    > label {
+        display: flex;
+        align-items: center;
+
+        height: 2em;
+
+        > .label-text {
+            min-width: 6em;
+        }
+
+        input[type=number] {
+            width: 8em;
+        }
+    }
+}
