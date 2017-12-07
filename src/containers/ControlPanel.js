@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ControlPanel.css';
 import FormFieldDataLine from '../components/forms/FormDataLine';
 import FormFieldSelect from '../components/forms/FormSelect';
+import Persister from '../services/Persister';
 
 class ControlPanel extends Component {
 
@@ -37,8 +38,10 @@ class ControlPanel extends Component {
         };
     }
 
-    /** DEBUG */
     componentWillUpdate(nextProps, nextState) {
+        Persister.storeSettings('ControlPanel', nextState);
+
+        // DEBUG
         console.log('ControlPanel state:', nextState);
     }
 
