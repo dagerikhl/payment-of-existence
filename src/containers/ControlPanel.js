@@ -39,7 +39,7 @@ class ControlPanel extends Component {
 
     /** DEBUG */
     componentWillUpdate(nextProps, nextState) {
-        console.log('state:', nextState);
+        console.log('ControlPanel state:', nextState);
     }
 
     handleGeneralChange = (data) => {
