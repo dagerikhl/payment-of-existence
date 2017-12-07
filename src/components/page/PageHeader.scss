@@ -1,5 +1,5 @@
 @import '../../styles/variables.css';
-@import '../styles/Banner';
+@import '../../styles/mixins/Banner';
 
 .app-header {
     @include Banner(column);
